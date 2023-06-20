@@ -29,6 +29,22 @@ public class MoveObject : MonoBehaviour
         }else if (MoveX <=-2 && MoveY<= -2){
             change =4;
         }
+        //switch case 문으로 변경
+        switch (change){
+            case 0:
+
+            break;
+            case 1:
+
+            break;
+            case 2:
+
+            break;
+            case 3:
+            break;
+            case 4:
+            break;
+        }
 
         if(change == 0)
         {
