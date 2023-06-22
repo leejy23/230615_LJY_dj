@@ -6,19 +6,19 @@ public class Main : MonoBehaviour
 {
     // Start is called before the first frame update
     
-    Enemy[] enemyList = new Enemy[10];
-    List<int> listNumber = new List<int>();
-    List<Enemy> e_list = new List<Enemy>();
+    //Enemy[] enemyList = new Enemy[10];
+    //List<int> listNumber = new List<int>();
+    //List<Enemy> e_list = new List<Enemy>();
 
     void Start()
     {   
-        /* 로그에 이름,hp 띄우기
+        // 로그에 이름,hp 띄우기
         Enemy e1 = new Enemy("elf",100);
         Enemy e2 = new Enemy("dragon",200);
 
         e1.GetEnemyInfo();
         e2.GetEnemyInfo();
-        */
+        
 
         // 리스트 생성방법
         //e_list[0] = new Enemy("name",10);
@@ -27,9 +27,10 @@ public class Main : MonoBehaviour
         
         
         // 이 두가지가 위에 두가지보다 자주 사용하는 방식임
-        Enemy e = new Enemy("test",1);
+        //Enemy e = new Enemy("test",1);
         //e_list.Add(e);
-        e_list[0] = e;
+
+        //e_list[0] = e;
 
 
         /* 반복문으로 배열에 적 넣기
@@ -39,12 +40,13 @@ public class Main : MonoBehaviour
         }*/
 
         // 반복문으로 리스트에 적 넣기
+        /*
         for(int i=0; i<enemyList.length;i++)
         {
             e_list[i] = new Enemy("elf",i);
             e.GetEnemyInfo();
             e_list.Add(e);
-        }
+        }*/
     }
 
    
