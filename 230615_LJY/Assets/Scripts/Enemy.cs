@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Enemy
 {
-   public string name;
+   public string namee;
    public int hp;
 
-    public Enemy(string name, int hp){
-        this.name = name;
+    public Enemy(string namee, int hp){
+        this.namee = namee;
         this.hp = hp;
         
     }
@@ -16,7 +16,7 @@ public class Enemy
 
    
     public void GetEnemyInfo(){
-        Debug.Log($"name : {this.name} hp : {this.hp}");
+        Debug.Log($"name : {this.namee} hp : {this.hp}");
         //Debug.Log("name : "+this.name+" hp : "+this.hp);
     }
 }
