@@ -7,8 +7,12 @@ public class Main2 : MonoBehaviour
     List<Character> characterList = new List<Character>();
     void Start()
     {
-        CreateCharacter(new Character("Jaeyoung", "Warrior", 100, 20));
-        CreateCharacter(new Character("Jaehwan", "Mage", 80, 30));
+        PrintAllCharacters();
+        CreateCharacter(new Character("kunkka", "Warrior", 100, 20));
+        CreateCharacter(new Character("zeus", "Mage", 80, 30));
+        PrintAllCharacters();
+        RemoveCharacter(1);
+        CreateCharacter(new Character("gonzo", "killer", 70, 90));
         PrintAllCharacters();
     }
     
@@ -36,7 +40,7 @@ public class Main2 : MonoBehaviour
 
         if (characterList.Count == 0)
         {
-            Debug.Log("¸®½ºÆ®°¡ ºñ¾îÀÖ½À´Ï´Ù.");
+            Debug.Log("ë¦¬ìŠ¤íŠ¸ê°€ ë¹„ì—ˆìŠµë‹ˆë‹¤.");
             return;
         }
     }

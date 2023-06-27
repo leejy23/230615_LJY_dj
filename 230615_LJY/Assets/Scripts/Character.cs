@@ -38,7 +38,7 @@ public class Character : MonoBehaviour
         this.job = job;
         this.hp = hp;
         this.atk = atk;
-}
+    }
 
     public void GetInfo()
     {
