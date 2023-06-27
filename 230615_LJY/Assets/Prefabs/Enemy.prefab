@@ -361,7 +361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyImg: []
-  Enemy: {fileID: 8091531180731379874}
+  hpbar: {fileID: 8104355421981350615}
 --- !u!1 &9076048769509243441
 GameObject:
   m_ObjectHideFlags: 0
