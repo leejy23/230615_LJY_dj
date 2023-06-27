@@ -19,6 +19,8 @@ public class EnemySpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Instantiate(enemyPrefab,Vector3.zero,Quaternion.identity,this.transform);
+        // 여기서 직접 하지말고 start 에서 만든거 list로 만들어서 불러오기. 안그러면 중복으로 오지게 생겨버림
+        //Instantiate(enemyPrefab,Vector3.zero,Quaternion.identity,this.transform);
+        //Start();
     }
 }
