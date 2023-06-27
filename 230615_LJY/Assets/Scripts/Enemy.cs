@@ -1,22 +1,43 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using System;
 
 public class Enemy
 {
-   public string namee;
-   public int hp;
 
-    public Enemy(string namee, int hp){
-        this.namee = namee;
+    public enum EnemyType{
+        Basic = 0,
+        Range,
+    }
+
+    private EnemyType enemyType;
+    private int hp;
+    private int atk;
+    private float speed;
+
+    public Enemy(EnemyType type, int hp,int atk, float sp){
+        this.enemyType = type;
         this.hp = hp;
+        this.atk = atk;
+        this.speed = sp;
         
     }
-    
+    public int HP{
+        get{return this.hp;}
+    }
+
+    public int Atk{
+        get{return this.atk;}
+    }
+
+    public float Speed{
+        get{return this.speed;}
+    }
+
+    public bool Hit(int dmg){
+        if(this.hp - dmg == 0) return false;
+        this.hp -=dmg;
+        return true;
+    }
 
    
-    public void GetEnemyInfo(){
-        Debug.Log($"name : {this.namee} hp : {this.hp}");
-        //Debug.Log("name : "+this.name+" hp : "+this.hp);
-    }
+
 }

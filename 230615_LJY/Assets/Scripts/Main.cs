@@ -13,12 +13,6 @@ public class Main : MonoBehaviour
     void Start()
     {   
         // 로그에 이름,hp 띄우기
-        Enemy e1 = new Enemy("elf",100);
-        Enemy e2 = new Enemy("dragon",200);
-
-        e1.GetEnemyInfo();
-        e2.GetEnemyInfo();
-        
 
         // 리스트 생성방법
         //e_list[0] = new Enemy("name",10);
