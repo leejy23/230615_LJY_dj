@@ -32,6 +32,7 @@ public class Enemy
         get{return this.speed;}
     }
 
+
     public bool Hit(int dmg){
         if(this.hp - dmg == 0) return false;
         this.hp -=dmg;

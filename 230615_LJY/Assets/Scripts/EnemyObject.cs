@@ -8,7 +8,7 @@ public class EnemyObject : MonoBehaviour
     [SerializeField] private Sprite[] enemyImg;
     [SerializeField] private Slider hpbar;
     Enemy enemy = null;
-    
+    float time = 0f;
 
     public void SetEnemy(Enemy e){
         this.enemy = e;
@@ -19,12 +19,21 @@ public class EnemyObject : MonoBehaviour
 
     private void Start()
     {
-        SetEnemy(new Enemy(Enemy.EnemyType.Basic,100,10,1.5f));
+        //SetEnemy(new Enemy(Enemy.EnemyType.Basic,100,10,1.5f));
     }
     
     private void EnemyMove(){
-        if(this.transform.position.y <= -2){
-            // y 값이 -2보다 작으면 멈춤
+        if(this.transform.position.y <= -5f)
+        {   
+            time += Time.deltaTime;
+            if(time>=1f)
+            {
+                time = 0f;
+                if(enemy.Hit(1)==false)
+                {
+                    Destroy(this.gameObject);
+                }
+            }
         } 
         else{
             this.transform.position -= new Vector3(0,enemy.Speed * Time.deltaTime, 0);
